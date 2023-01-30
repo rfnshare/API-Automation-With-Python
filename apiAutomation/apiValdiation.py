@@ -12,4 +12,5 @@ response = requests.get("http://216.10.245.166/Library/GetBook.php",
 # data = json.loads(response.text)
 # print(data[0]['isbn'])
 print(type(response.json()))
-print(response.json())
+print(response.json()[0]['isbn'])
+print(response.status_code)
