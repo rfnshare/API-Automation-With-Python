@@ -1,2 +1,4 @@
 .idea
 Basics/*.txt
+apiAutomation/__pycache__/
+utilities/__pycache__/
