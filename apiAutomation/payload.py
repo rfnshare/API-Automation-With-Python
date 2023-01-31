@@ -2,7 +2,7 @@ import secrets
 import string
 
 
-def addBookPyaload(book_id):
+def addBookPayload(book_id):
     body = {
         "name": "Learn Appium Automation with Java",
         "isbn": book_id,
@@ -12,11 +12,8 @@ def addBookPyaload(book_id):
     return body
 
 
-def deleteBook():
+def deleteBookPayload(book_id):
     body = {
-        "name": "Learn Appium Automation with Java",
-        "isbn": id,
-        "aisle": "227",
-        "author": "John foe"
+        "ID": book_id,
     }
     return body

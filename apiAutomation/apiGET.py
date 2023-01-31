@@ -1,7 +1,12 @@
 import json
 import requests
 
-response = requests.get("http://216.10.245.166/Library/GetBook.php",
+from utilities.config import *
+from utilities.resources import APIResources
+config = getConfig()
+
+# Get BookList By Author
+response = requests.get(config["API"]["host"]+APIResources.getBook,
                         params=
                         {
                             "AuthorName": "Rahul Shetty",
