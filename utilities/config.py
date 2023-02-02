@@ -27,3 +27,12 @@ def getConnection():
             return conn
     except Error as e:
         print("Error->", e)
+
+
+def getQuery(query):
+    conn = getConnection()
+    cursor = conn.cursor()
+    cursor.execute(query)
+    row = cursor.fetchone()
+    conn.close()
+    return row
