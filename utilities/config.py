@@ -1,12 +1,12 @@
 import configparser
 from mysql.connector import Error
-
+from pathlib import Path
 import mysql.connector
 
 
 def getConfig():
     config = configparser.ConfigParser()
-    config.read('../utilities/properties.ini')
+    config.read(Path(__file__).parent.parent / 'utilities/properties.ini')
     return config
 
 
