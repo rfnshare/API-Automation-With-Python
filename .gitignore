@@ -3,3 +3,4 @@ Basics/*.txt
 apiAutomation/__pycache__/
 utilities/__pycache__/
 utilities/secrects.py
+AllureReports
