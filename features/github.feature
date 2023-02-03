@@ -1,6 +1,8 @@
 # Created by rfnsh at 2/3/2023
-Feature: # Enter feature name here
+Feature: GitHub API Validation
   # Enter feature description here
 
-  Scenario: # Enter scenario name here
-    # Enter steps here
+  Scenario: Session Management Check
+    Given I Have Github Auth Credentials
+    When I Hit GitRepo API of Github
+    Then Status Code of response should be 200
