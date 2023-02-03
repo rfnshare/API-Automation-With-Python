@@ -16,3 +16,5 @@ Feature: Verify Books Added & Deleted using library API
         | isbn  | aisle |
         | qwer  | 7894  |
         | zxcv  | 5464  |
+
+# behave features/BookAPI.feature --no-capture --tags=regression
