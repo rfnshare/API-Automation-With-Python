@@ -20,3 +20,4 @@ Feature: Verify Books Added & Deleted using library API
         | zxcv  | 5464  |
 
 # behave features/BookAPI.feature --no-capture --tags=regression
+# behave --no-capture -f allure_behave.formatter:AllureFormatter -o AllureReports
