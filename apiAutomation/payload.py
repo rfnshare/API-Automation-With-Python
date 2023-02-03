@@ -4,11 +4,11 @@ import string
 from utilities.config import getQuery
 
 
-def addBookPayload(book_id):
+def addBookPayload(book_id, aisle):
     body = {
         "name": "Learn Appium Automation with Java",
         "isbn": book_id,
-        "aisle": "227",
+        "aisle": aisle,
         "author": "John foe"
     }
     return body

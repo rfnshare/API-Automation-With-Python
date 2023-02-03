@@ -17,7 +17,7 @@ def step_impl(context):
                               for i in range(7))
     context.headers = {"Content-Type": "application/json"}
     context.url = config["API"]["host"] + APIResources.addBook
-    context.payload = addBookPayload(context.book_id)
+    context.payload = addBookPayload(context.book_id, "227")
 
 
 @when('we execute the AddBook PostAPI method')
@@ -30,3 +30,10 @@ def step_impl(context):
     context.book_id = context.response.json()['ID']
     print(context.book_id)
     assert "successfully added" in context.response.json()['Msg']
+
+
+@given(u'the book details with {isbn} & {aisle}')
+def step_impl(context, isbn, aisle):
+    context.headers = {"Content-Type": "application/json"}
+    context.url = config["API"]["host"] + APIResources.addBook
+    context.payload = addBookPayload(isbn, aisle)
