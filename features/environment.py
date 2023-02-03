@@ -13,8 +13,9 @@ def before_scenario(context, scenario):
 
 
 def after_scenario(context, scenario):
-    resp = requests.post(config["API"]["host"] + APIResources.deleteBook, json=deleteBookPayload(context.book_id),
-                         headers=headers, )
-    print("Deleted:", context.book_id)
-    assert resp.status_code == 200
-    assert "successfully deleted" in resp.json()['msg']
+    if "library" in scenario.tags:
+        resp = requests.post(config["API"]["host"] + APIResources.deleteBook, json=deleteBookPayload(context.book_id),
+                             headers=headers, )
+        print("Deleted:", context.book_id)
+        assert resp.status_code == 200
+        assert "successfully deleted" in resp.json()['msg']
