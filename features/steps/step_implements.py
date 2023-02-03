@@ -7,6 +7,7 @@ from behave import *
 from apiAutomation.payload import addBookPayload
 from utilities.config import *
 from utilities.resources import APIResources
+from utilities.secrects import Info
 
 config = getConfig()
 
@@ -37,3 +38,20 @@ def step_impl(context, isbn, aisle):
     context.headers = {"Content-Type": "application/json"}
     context.url = config["API"]["host"] + APIResources.addBook
     context.payload = addBookPayload(isbn, aisle)
+
+
+@given('I Have Github Auth Credentials')
+def step_impl(context):
+    context.se = requests.session()
+    context.se.auth = ('rfnshare', Info.token)
+
+
+@when('I Hit GitRepo API of Github')
+def step_impl(context):
+    context.response = context.se.get(APIResources.github_repo)
+
+
+@then('Status Code of response should be {status_code:d}')
+def step_impl(context, status_code):
+    print(context.response.status_code)
+    assert context.response.status_code == status_code
