@@ -66,3 +66,11 @@ def uploadIntoAWS(src, dest):
     des_path = dest
     src_path = (Path(__file__).parent.parent / src)
     sftp.put(src_path, des_path)
+
+
+def downloadFromAWS(src, dest):
+    ssh = getSSHConnection()
+    sftp = ssh.open_sftp()
+    src_path = src
+    des_path = (Path(__file__).parent.parent / dest)
+    sftp.get(src_path, des_path)

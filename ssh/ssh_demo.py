@@ -1,7 +1,6 @@
-import paramiko as paramiko
-from pathlib import Path
+import csv
+from utilities.config import *
 
-from utilities.config import getConfig, uploadIntoAWS, getSSHConnection
 # Setup AWS
 # ec2-54-178-192-48.ap-northeast-1.compute.amazonaws.com [Host]
 # ec2-user [user]
@@ -25,4 +24,22 @@ uploadIntoAWS('batchFiles/loanasa.csv', 'loanasa.csv')
 
 # Trigger The Batch
 ssh.exec_command("python3 script.py")
+
+# Download Local Files to local systems
+downloadFromAWS('loanasa.csv', 'batchFiles/output/loanasa.csv')
 ssh.close()
+
+with open(Path(__file__).parent.parent / 'batchFiles/output/loanasa.csv') as f:
+    f = csv.reader(f, delimiter=',')
+    names = []
+    status = []
+    for i in f:
+        names.append(i[0])
+        status.append(i[1])
+
+dic = dict(zip(names, status))
+# print(dic)
+# print(status)
+for x, y in dic.items():
+    if x == '32321':
+        assert y == 'rejected'

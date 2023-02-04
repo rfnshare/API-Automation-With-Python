@@ -61,6 +61,9 @@ Behold my periodic learnings, and judge me for my ignorance.
 * Execute cmd using python to aws 
 * Organize ssh connections into config function
 * upload/download batch-files into ssh server from local machine
+* run batch job into aws
+* Download batch update csv dile into local machine
+* Validate CSV Data
 
 ### Miscellaneous
 
