@@ -9,6 +9,8 @@ from utilities.config import getConfig
 # service sshd reload [to effect system]
 # passwd ec2-user [setup password for ec2-user]
 
+
+# Start Connection
 username = getConfig()['SSH']['username']
 password = getConfig()['SSH']['password']
 host = getConfig()['SSH']['host']
@@ -17,3 +19,8 @@ port = getConfig()['SSH']['port']
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect(host, port, username, password)
+
+# Run Commands
+stdin, stdout, stderr = ssh.exec_command("cat demoFile")
+lines = stdout.readlines()
+print(lines[1])
