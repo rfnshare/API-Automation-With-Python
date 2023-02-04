@@ -57,7 +57,10 @@ Behold my periodic learnings, and judge me for my ignorance.
 ### AWS
 
 * Setting up AWS instance 
-* Connected aws using ssh (Ongoing)
+* Connected aws using ssh, setup in terminal & ssh folder
+* Execute cmd using python to aws 
+* Organize ssh connections into config function
+* upload/download batch-files into ssh server from local machine
 
 ### Miscellaneous
 
