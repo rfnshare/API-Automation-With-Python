@@ -1,5 +1,7 @@
 import csv
 
+field_names = ['Name','Status']
+# Read Data From CSV File
 with open('../utilities/loanapp.csv', 'r') as csvFile:
     data = csv.reader(csvFile, delimiter=',')
     # print(data)
@@ -18,3 +20,8 @@ for x, y in dic.items():
 indx = names.index('sam')
 lnstatus = status[indx]
 print("sam loan status is", lnstatus)
+
+# Write Data To CSV File
+row = ["Testing", "Approved"]
+# with open('../utilities/loanapp.csv', 'a') as wFile:
+#     write = csv.writer(wFile).writerow(row)
