@@ -1,7 +1,8 @@
 import paramiko as paramiko
+from pathlib import Path
 
-from utilities.config import getConfig
-
+from utilities.config import getConfig, uploadIntoAWS, getSSHConnection
+# Setup AWS
 # ec2-54-178-192-48.ap-northeast-1.compute.amazonaws.com [Host]
 # ec2-user [user]
 # sudo su - [go to root user]
@@ -11,17 +12,14 @@ from utilities.config import getConfig
 
 
 # Start Connection
-username = getConfig()['SSH']['username']
-password = getConfig()['SSH']['password']
-host = getConfig()['SSH']['host']
-port = getConfig()['SSH']['port']
-
-ssh = paramiko.SSHClient()
-ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-ssh.connect(host, port, username, password)
+ssh = getSSHConnection()
 
 # Run Commands
 stdin, stdout, stderr = ssh.exec_command("cat demoFile")
 lines = stdout.readlines()
 print(lines[1])
+
+# Uploading Files
+uploadIntoAWS('batchFiles/script.py', 'script.py')
+uploadIntoAWS('batchFiles/loanasa.csv', 'loanasa.csv')
 ssh.close()
