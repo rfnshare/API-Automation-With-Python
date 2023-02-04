@@ -25,11 +25,3 @@ print("sam loan status is", lnstatus)
 row = ["Testing", "Approved"]
 # with open('../utilities/loanapp.csv', 'a') as wFile:
 #     write = csv.writer(wFile).writerow(row)
-
-
-# ec2-54-178-192-48.ap-northeast-1.compute.amazonaws.com [Host]
-# ec2-user [user]
-# sudo su - [go to root user]
-# vi /etc/ssh/sshd_config []
-# service sshd reload [to effect system]
-# passwd ec2-user [setup password for ec2-user]
