@@ -9,5 +9,12 @@ with open('../utilities/loanapp.csv', 'r') as csvFile:
     for i in data:
         names.append(i[0])
         status.append(i[1])
-print(names)
-print(status)
+# print(names)
+# print(status)
+dic = dict(zip(names, status))
+for x, y in dic.items():
+    print(x, y)
+
+indx = names.index('sam')
+lnstatus = status[indx]
+print("sam loan status is", lnstatus)
