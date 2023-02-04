@@ -22,4 +22,7 @@ print(lines[1])
 # Uploading Files
 uploadIntoAWS('batchFiles/script.py', 'script.py')
 uploadIntoAWS('batchFiles/loanasa.csv', 'loanasa.csv')
+
+# Trigger The Batch
+ssh.exec_command("python3 script.py")
 ssh.close()
