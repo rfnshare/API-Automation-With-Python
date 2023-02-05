@@ -67,7 +67,10 @@ Behold my periodic learnings, and judge me for my ignorance.
 
 ### Web Scraping With Beautiful Soap
 * GET All Book Names using GET api
-* Scarp all book name by using response data
+* Scarp all books name by using response data
+* Scrap all books sub details & combine it
+* Upload into AWS & execute the script
+* Download the result into local machine
 
 
 ### Miscellaneous
