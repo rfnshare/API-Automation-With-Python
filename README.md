@@ -47,7 +47,7 @@ Behold my periodic learnings, and judge me for my ignorance.
 ### Reporting
 
 * Generate Allure Report in JSON format
-* Setup allure cmd line to generate HTML report
+* Setup allure cmd line to generate HTML report from JSON
 
 ### CSV Read/Write
 
@@ -64,6 +64,11 @@ Behold my periodic learnings, and judge me for my ignorance.
 * run batch job into aws
 * Download batch update csv dile into local machine
 * Validate CSV Data
+
+### Web Scraping With Beautiful Soap
+* GET All Book Names using GET api
+* Scarp all book name by using response data
+
 
 ### Miscellaneous
 
