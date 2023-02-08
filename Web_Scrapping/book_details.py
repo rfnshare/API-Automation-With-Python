@@ -37,4 +37,3 @@ for x, y in dic.items():
     row = [x, y]
     with open('output.csv', 'a', newline="") as f:
         write = csv.writer(f).writerow(row)
-
