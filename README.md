@@ -75,7 +75,9 @@ Behold my periodic learnings, and judge me for my ignorance.
 
 ### Miscellaneous
 
-* Upcoming
+* Postman API Testing
+* Tests Script Write For Assertion/Validations
+* Pre-request Script for Dynamic Values
 
 ## Non-Technical Things
 
