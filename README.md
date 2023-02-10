@@ -73,11 +73,25 @@ Behold my periodic learnings, and judge me for my ignorance.
 * Download the result into local machine
 
 
-### Miscellaneous
+### Postman API
 
 * Postman API Testing
+* Pre-request Script In Postman for get & set global/local/collection Values
+* Set Variable Value For Other API Call
 * Tests Script Write For Assertion/Validations
-* Pre-request Script for Dynamic Values
+  * response.JSON()
+  * response.headers()
+  * response.responseTime
+  * response.text()
+    * To Have Status
+    * To Have Property
+    * To Eql String
+    * To Have Header
+    * To Be Below
+    * To Include
+* Reference [https://learning.postman.com/docs/writing-scripts/script-references/postman-sandbox-api-reference/]
+
+### Miscellaneous
 
 ## Non-Technical Things
 
