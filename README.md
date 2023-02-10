@@ -89,6 +89,7 @@ Behold my periodic learnings, and judge me for my ignorance.
     * To Have Header
     * To Be Below
     * To Include
+  * Validate JSON Schema
 * Reference [https://learning.postman.com/docs/writing-scripts/script-references/postman-sandbox-api-reference/]
 
 ### Miscellaneous
