@@ -28,5 +28,5 @@ for i in response.json():
         actual_book = i
         break
 expected_book = {'book_name': 'Learn with Java', 'isbn': 'RGHCC', 'aisle': '222'}
-assert actual_book == expected_book
+assert actual_book == expected_book, f"Expected: {expected_book}, Actual: {actual_book}"
 
